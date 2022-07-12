@@ -1,3 +1,4 @@
 module.exports = {
+  publicPath: process.env.NODE_ENV === "production" ? "/vue-test-task/" : "/",
   transpileDependencies: ["vuetify"],
 };
