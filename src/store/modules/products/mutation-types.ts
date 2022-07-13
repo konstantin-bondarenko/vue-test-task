@@ -1,0 +1,5 @@
+export enum MutationTypes {
+  ADD_PRODUCT = "ADD_PRODUCT",
+  DELETE_PRODUCT = "DELETE_PRODUCT",
+  INIT_PRODUCTS = "INIT_PRODUCTS",
+}

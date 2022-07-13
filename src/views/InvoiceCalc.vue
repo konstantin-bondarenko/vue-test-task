@@ -18,11 +18,14 @@ export default Vue.extend({
     Form,
     Table,
   },
+  created() {
+    this.initProducts();
+  },
   computed: {
-    ...mapState(["products"]),
+    ...mapState("products", ["products"]),
   },
   methods: {
-    ...mapActions(["addProduct", "deleteProducts"]),
+    ...mapActions("products", ["addProduct", "deleteProducts", "initProducts"]),
   },
 });
 </script>
