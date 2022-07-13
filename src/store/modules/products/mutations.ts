@@ -16,6 +16,7 @@ export const mutations: MutationTree<State> & Mutations = {
   },
   [MutationTypes.DELETE_PRODUCT](state, payload: Array<string>) {
     state.products = state.products.filter((el) => !payload.includes(el.id));
+    localStorage.setItem("products", JSON.stringify(state.products));
   },
   [MutationTypes.INIT_PRODUCTS](state) {
     if (localStorage.getItem("products")) {
